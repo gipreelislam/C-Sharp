@@ -1,6 +1,35 @@
 # Threading
 ## Asynchronous Programming
 ### Example 1
+`Main` Function
+```csharp
+ static async Task Main()
+ {
+     Action<int> progress = p => {
+         Console.Clear();
+         Console.WriteLine($"{p}%");
+     };
+     await DisplayProgress(progress);
+
+     Console.ReadLine();
+ }
+```
+`DisplayProgress` Function
+```csharp
+ static Task DisplayProgress(Action<int> OnprogressChanged)
+ {
+     return Task.Run(() =>
+     {
+         for(int i = 0; i <= 100; i++)
+         {
+             Task.Delay(100).Wait();
+             if (i % 10 == 0)
+                 OnprogressChanged(i);
+         }
+     });
+ }
+```
+### Example 2
 define `CustomEventArgs`
 ```csharp
 public class CustomEventArgs : EventArgs

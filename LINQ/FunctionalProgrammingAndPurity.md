@@ -9,7 +9,9 @@
 - pure function is the key part of functional programming
 
 **Higher Order Function**
-- Function that takes `func` as an argument or return it
+- Function that does at least one of the following
+	- takes one or more functions as arguments
+	- returns a function or value as its result
 
 ## Example
 evolution from procedural to functional programming

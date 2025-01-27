@@ -1,0 +1,52 @@
+## Preface
+
+**pure Function**
+- Robust and testable code
+- Prefer Declarative over Imperative coding
+
+**Functional Programming**
+- Programming paradigm for developing software using functions
+- pure function is the key part of functional programming
+
+**Higher Order Function**
+- Function that takes `func` as an argument or return it
+
+## Example
+evolution from procedural to functional programming
+1. Procedural programming `Impure`
+using External dependency, Imperative style
+```csharp
+// Callee
+public static IEnumerable<Employee> GetEmployeeWithFirstNameEndsWith
+	(string value)
+{
+	var employees = Repository.loadEmployees();
+	foreach(var employee in employees)
+	{
+		if(employee.FirstName.ToLowerInvariant().EndsWith(value.ToLowerInvariant))
+			yield return employee;
+	}
+}
+// Caller
+var q = GetEmployeeWithFirstNameEndsWith("ma");
+```
+2. Functional programming `Pure`
+```csharp
+public static IEnumerable<Employee> Filter
+	(IEnumerable<Employee> source, Predicate<Employee> predicate)
+{
+	foreach(var employee in source)
+	{
+		if(predicate(employee))
+			yield return employee;
+	}
+}
+// Caller
+var list = Repository.loadEmployees();
+var q = Filter(list, e => e.FirstName.ToLowerInvariant() == "ma");
+```
+3. Functional programming using Extension Method `Pure`
+```csharp
+public static IEnumerable<Employee> Filter
+	(this IEnumerable<Employee> source, Predicate<Employee> predicate) {..}
+```

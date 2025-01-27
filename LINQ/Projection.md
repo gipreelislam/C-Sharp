@@ -3,7 +3,7 @@
 2. project a new property
 3. perform mathematical operation
 
-> [!NOTE]  
+> [!TIP]  
 > **DTO** acronym for Data Transfer Object
 
 ### 1. `Select`

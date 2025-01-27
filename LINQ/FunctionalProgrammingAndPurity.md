@@ -1,4 +1,4 @@
-## Preface
+## Functional Programming and Purity
 
 **pure Function**
 - Robust and testable code

@@ -13,7 +13,7 @@
 
 ## Example
 evolution from procedural to functional programming
-1. Procedural programming `Impure`
+1. Procedural programming `Impure`<br>
 using External dependency, Imperative style
 ```csharp
 // Callee

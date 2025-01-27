@@ -3,8 +3,9 @@
 2. project a new property
 3. perform mathematical operation
 
-> [!info]
+> [!NOTE]  
 > **DTO** acronym for Data Transfer Object
+
 ### 1. `Select`
 
 ```csharp

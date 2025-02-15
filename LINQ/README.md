@@ -1,32 +1,32 @@
 # LINQ
 
-01. Preface
+1. Preface
    - Functional Programming and Purity
-02. Core LINQ
+2. Core LINQ
    - Writing LINQ ways
    - `IEnumerable` vs. `IQueryable`
    - LINQ Execution Order
    - Deferred vs. Immediate
-03. Projection
+3. Projection
    - Select
    - Select Many
    - Zip
-04. Sorting
-05. Partioning
+4. Sorting
+5. Partioning
    - Skip
    - Take
    - Chunk
-06. Quantifiers
+6. Quantifiers
    - Any
    - All
    - Conatins
-07. Grouping
+7. Grouping
    - Group By
    - To Lookup
-08. Joining
+8. Joining
    - Join
    - Group Join
-09. Generation Operations
+9. Generation Operations
 10. Element Operations
 11. Aggregate Operations
 12. Set Operations
